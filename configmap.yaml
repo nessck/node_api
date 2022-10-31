@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  namespace: metallb-system
+  name: config
+data:
+  port: "8080"
+  NODE_ENV: "development"
+  DB_HOST: "localhost"
+  DB_PORT: "5432"
+  DB_DATABASE: "postgres"
+  DATABASE_URL: "jdbc:postgresql://localhost:5432/postgres"
+  config: |
+    address-pools:
+     - name: default
+       protocol: layer2
+       addresses:
+       - 192.168.79.61-192.168.79.71
