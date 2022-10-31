@@ -15,8 +15,8 @@ spec:
         app: nodejs
     spec:
       containers:
-        - name: nodejs
+      - name: nodejs
         image: neslihancakir/nodejs
         imagePullPolicy: Always
         ports:
-          - containerPort: 8080
+        - containerPort: 8080
