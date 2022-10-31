@@ -1,5 +1,5 @@
 {
-  "name": "node-postgres-api",
+  "name": "nodejs",
   "version": "1.0.0",
   "description": "Node API with Express and Postgres",
   "main": "app.js",
