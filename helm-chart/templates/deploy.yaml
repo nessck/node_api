@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nodejs
+  name: {{ .Values.name }}
   labels:
-    app: nodejs
+    app: {{ .Values.name }}
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: nodejs
+      app: {{ .Values.name }}
   template:
     metadata:
       labels:
-        app: nodejs
+        app: {{ .Values.name }}
     spec:
       containers:
-      - name: nodejs
-        image: neslihancakir/nodejs
+      - name: {{ .Values.name }}
+        image: {{ .Values.deployment.image }}:{{ .Values.deployment.tag }}
         imagePullPolicy: Always
         ports:
-        - containerPort: 8080
+        - containerPort: {{ .Values.deployment.containerPort }}
