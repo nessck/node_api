@@ -1,4 +1,5 @@
 name: nodejs
 deployment:
   image: neslihancakir/nodejs
+  tag: 1.0.0
   containerPort: 8080
