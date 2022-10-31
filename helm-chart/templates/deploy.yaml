@@ -1,9 +1,11 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nodejs-deployment
+  name: nodejs
+  labels:
+    app: nodejs
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: nodejs
@@ -13,7 +15,8 @@ spec:
         app: nodejs
     spec:
       containers:
-      - name: nodejs3
+        - name: nodejs
         image: neslihancakir/nodejs
+        imagePullPolicy: Always
         ports:
-        - containerPort: 8080
+          - containerPort: 8080
