@@ -1,0 +1,24 @@
+stages:
+- build
+- test
+image:
+    name: docker/compose:latest
+services:
+- docker:dind
+before_script:
+- docker version
+- docker-compose version
+build:
+    stage: build
+    script:
+    - docker build -t nodejs .
+    - docker-compose up -d
+test:
+    stage: test
+    script :
+    - docker build -t nodejs .
+    - docker-compose up -d
+    - sleep 5
+   # - docker exec postgres psql -U postgres -h postgres -f home/dumps/tests/medium.sql
+   # - docker exec myimage npx jasmine spec/api.spec.js spec/*.js
+   # - docker-compose down
