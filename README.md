@@ -15,6 +15,7 @@ Jr. Devops Engineer Case Study for Codeway Studios
 
 -   Docker on local machine
 -   Minikube
+-   Kubernetes
 
 ## Run Locally
 
