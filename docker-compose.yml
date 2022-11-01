@@ -33,8 +33,6 @@ services:
       NODE_ENV: production
       DATABASE_URL: testurl
     command: node server.js
-    volumes:
-      - .:/var/www/html  
 
 volumes:
   dbdata:
