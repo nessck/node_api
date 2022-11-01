@@ -22,9 +22,6 @@ test:
     - docker build -t nodejs .
     - docker-compose up -d
     - sleep 5
-    - docker exec postgres psql -U postgres -h postgres -f home/dumps/tests/medium.sql
-    - docker exec myimage npx jasmine spec/api.spec.js spec/*.js
-    - docker-compose down
 only:
     - master
     when: manual
@@ -40,9 +37,6 @@ test:
     - docker build -t nodejs .
     - docker-compose up -d
     - sleep 5
-    # docker exec postgres psql -U postgres -h postgres -f home/dumps/tests/medium.sql
-    # docker exec myimage npx jasmine spec/api.spec.js spec/*.js
-    # docker-compose down
 only:
     - master
     when: manual

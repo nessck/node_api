@@ -22,13 +22,13 @@ Jr. Devops Engineer Case Study for Codeway Studios
 Clone the project
 
 ```bash
-  git clone **git url**
+  git clone https://github.com/nessck/node_api.git
 ```
 
 Go to the project directory
 
 ```bash
-  cd Node_API
+  cd node_api
 ```
 
 > *Before next step please make sure you have Docker installed on local machine*
@@ -61,4 +61,4 @@ Want to contribute? Great!
 
 ## Feedback
 
-If you have any feedback, please reach out to us at didemm.bayar@gmail.com
+If you have any feedback, please reach out to us at nesliicakir@gmail.com
