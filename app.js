@@ -91,7 +91,7 @@ const helloWorld = (req, res) => {
   });
 };
 
-app.route('/helloworld').get(server)
+app.route('/helloworld').get(helloWorld)
 app.route('/food').get(getFood).post(newFood);
 app.route('/food/:id').get(getFoodById).put(updateFood).delete(deleteFood);
 
