@@ -12,6 +12,7 @@ services:
     volumes:
       - dbdata:/var/lib/postgresql/data/
       - /app/queries/food.sql:/docker-entrypoint-initdb.d/init.sql
+      - /private/var/lib/postgresql/data:/var/lib/postgresql/data
     ports:
       - '5432:5432'
   api:
@@ -33,6 +34,8 @@ services:
       NODE_ENV: development
       DATABASE_URL: testurl
     command: node server.js
+    volumes:
+      - .:/var/www/html  
 
 volumes:
   dbdata:
