@@ -30,7 +30,7 @@ services:
       DB_PORT: 5432
       PORT: 8080
       DB_DATABASE: postgres
-      NODE_ENV: development
+      NODE_ENV: production
       DATABASE_URL: testurl
     command: node server.js
     volumes:

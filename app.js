@@ -81,6 +81,13 @@ const deleteFood = (req, res) => {
   });
 };
 
+const server = http.createServer((req, res) => {
+  res.statusCode = 200;
+  res.setHeader('Content-Type', 'text/plain');
+  res.end('Hello World');
+});
+
+app.route('/test').get(server)
 app.route('/food').get(getFood).post(newFood);
 app.route('/food/:id').get(getFoodById).put(updateFood).delete(deleteFood);
 
