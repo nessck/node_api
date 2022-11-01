@@ -81,13 +81,17 @@ const deleteFood = (req, res) => {
   });
 };
 
-const server = http.createServer((req, res) => {
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/plain');
-  res.end('Hello World');
-});
+const helloWorld = (req, res) => {
+  res.status(200).json({
+    status: 'sucess',
+    requestTime: req.requestTime,
+    data: "hello world" +" DB_USER: " + process.env.DB_USER + 
+    " DB_HOST: " + process.env.DB_HOST + 
+    " DB_PORT: " + process.env.DB_PORT ,
+  });
+};
 
-app.route('/test').get(server)
+app.route('/helloworld').get(server)
 app.route('/food').get(getFood).post(newFood);
 app.route('/food/:id').get(getFoodById).put(updateFood).delete(deleteFood);
 
